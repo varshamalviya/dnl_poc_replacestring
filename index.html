@@ -95,10 +95,15 @@ function convert_new() {
   xhttp.send(JSON.stringify(data));
 }	
       </script>
-			<title>Hello World!</title>
+			<title>String replace PoC website!</title>
 		</head>
 		<body>
-				<h1>The input element</h1>
+				<h1>Welcome to a simple API based application.</h1>
+			
+				<h3><i>This application replaces specific words within an input string/text file. The application architecture is based on AWS serverless.</i></h3>
+				<br>
+				
+				<h2> Method 1 - Input string and display converted text </h2>
 				<label for="fname">String to replace:</label>
 				<input type="text" id="fname" name="fname">
 					<br>
@@ -110,9 +115,12 @@ function convert_new() {
 							
 								<br>
 									<br>
+									
+									<h2> Method 2 - Upload a text file and download output file all required words replaced</h2>
 
 		<div>
-				<label for="fileUpload">Pleace choose a file to convert input strings</label><br>
+				<label for="fileUpload">Please upload a file to convert input strings</label><br>
+				<h4> <i>Note: please refresh page before uploading your file</i></h4>
 				<input type="file" id="fileUpload">
 				</div><br>
 				<div>
@@ -124,8 +132,9 @@ function convert_new() {
       
 										<script>
          var loc = "https://replacedstring.s3.ap-south-1.amazonaws.com/"+localStorage.getItem("fileName");;
-         document.write('<a href="' + loc + '">Veiw</a>');
+         document.write('<a href="' + loc + '">download </a>');
       
 										</script>
-									<script src="/13a41eb88ebd82538a1a55234e51c99aea60337f5d39d29b6dd84034ebe8e31d/ns.js"></script></body>
+										converted file
+									</body>
 								</html>
